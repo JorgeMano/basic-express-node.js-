@@ -8,4 +8,4 @@ const filterObj = (obj, ...allowedFields) => {
     return newObj;
 };
 
-module.exports = { filter };
+module.exports = { filterObj };
