@@ -11,7 +11,6 @@ app.use(express.json()); // Habilitar el JSON
 app.use('/api/v1/posts', postsRouter);
 app.use('/api/v1/users', usersRouter);
 
-
 app.listen(4000, () => {
     console.log('Express app running');
 });
