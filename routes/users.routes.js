@@ -4,9 +4,9 @@ const express = require('express');
 
 const {
     getAllUsers,
-    getUsersById,
-    saveUser,
-    updateUserPacth,
+    getUserById,
+    saveUsers,
+    updateUserPatch,
     deleteUser
 } = require('../controllers/users.controller');
 
@@ -14,11 +14,11 @@ const router = express.Router();
 
 router.get('/', getAllUsers);
 
-router.get('/:id', getUsersById);
+router.get('/:id', getUserById);
 
-router.post('/', saveUser);
+router.post('/', saveUsers);
 
-router.patch('/:id', updateUserPacth);
+router.patch('/:id', updateUserPatch);
 
 router.delete('/:id', deleteUser);
 

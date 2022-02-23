@@ -19,7 +19,7 @@ exports.getAllPosts = (req, res) => {
 //Get posts by id
 exports.getPostById = (req, res) => {
     const { id } = req.params;
-    const post = post.find(post => post.id === +id);
+    const post = posts.find(post => post.id === +id);
 
     if (!post) {
         res.status(404).json({

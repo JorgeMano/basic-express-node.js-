@@ -17,9 +17,9 @@ exports.getAllUsers = (req, res) => {
 }
 
 //Get users by id
-exports.getUsersById = (req, res) => {
+exports.getUserById = (req, res) => {
     const { id } = req.params;
-    const user = user.find(user => user.id === +id);
+    const user = users.find(user => user.id === +id);
 
     if (!user) {
         res.status(404).json({
@@ -40,6 +40,13 @@ exports.getUsersById = (req, res) => {
 //Save users to databas
 exports.saveUsers = (req, res) => {
     const { name, age } = req.body;
+
+    if (!name || !age) {
+        res.status(400).json({
+            status: 'error',
+            message: ' Must provide a valid name and an age',
+        })
+    }
     const newUser = {
         id: Math.floor(Math.random() * 100),
         name,
