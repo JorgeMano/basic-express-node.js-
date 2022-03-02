@@ -14,3 +14,11 @@ app.use('/api/v1/users', usersRouter);
 app.listen(4000, () => {
     console.log('Express app running');
 });
+
+/*
+Http Status codes examples:
+2** --> success
+3** --> misc
+4** --> Client errors
+5** --> Server errors
+*/
